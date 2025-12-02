@@ -1,0 +1,32 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DONIA Control Center" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen" Background="#1b1b1b">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#111111" Padding="10">
+            <TextBlock Text="DONIA CONTROL CENTER" Foreground="#4da6ff"
+                       FontSize="20" Margin="0 0 0 15"/>
+
+            <Button Name="BtnFrontend"  Content="Test Frontend"  Height="35" Margin="0 5"/>
+            <Button Name="BtnBackend"   Content="Test Backend"   Height="35" Margin="0 5"/>
+            <Button Name="BtnDocker"    Content="Docker Control" Height="35" Margin="0 5"/>
+            <Button Name="BtnGit"       Content="GitHub Push"    Height="35" Margin="0 5"/>
+            <Button Name="BtnFixAll"    Content="Auto Repair"    Height="35" Margin="0 15"/>
+
+            <Button Name="BtnOpenSite"   Content="Ouvrir DONIA"   Height="35" Margin="0 5"/>
+            <Button Name="BtnOpenFolder" Content="Ouvrir Dossier" Height="35" Margin="0 5"/>
+        </StackPanel>
+
+        <TextBox Name="LogBox" Grid.Column="1" Margin="10"
+                 Background="#000000" Foreground="#00ff00"
+                 FontFamily="Consolas" FontSize="13"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>

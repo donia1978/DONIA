@@ -1,0 +1,28 @@
+﻿services:
+  don-backend:
+    build: ./backend
+    container_name: don-backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - don-db
+
+  don-frontend:
+    build: ./frontend
+    container_name: don-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - don-backend
+
+  don-db:
+    image: mongo:latest
+    container_name: don-db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
